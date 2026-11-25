@@ -1,0 +1,12 @@
+label,openssl_args,unit,execute_order
+X25519,-algorithm X25519,key,shuffled
+P-256,-algorithm EC -pkeyopt ec_paramgen_curve:P-256,key,shuffled
+P-384,-algorithm EC -pkeyopt ec_paramgen_curve:P-384,key,shuffled
+P-521,-algorithm EC -pkeyopt ec_paramgen_curve:P-521,key,shuffled
+secp160r1,-algorithm EC -pkeyopt ec_paramgen_curve:secp160r1,key,shuffled
+ML-KEM-512,-algorithm ML-KEM-512,key,shuffled
+ML-KEM-768,-algorithm ML-KEM-768,key,shuffled
+ML-KEM-1024,-algorithm ML-KEM-1024,key,shuffled
+ML-DSA-44,-algorithm ML-DSA-44,key,shuffled
+ML-DSA-65,-algorithm ML-DSA-65,key,shuffled
+ML-DSA-87,-algorithm ML-DSA-87,key,shuffled
