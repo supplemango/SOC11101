@@ -4,7 +4,7 @@ Supporting material for the MSc Cybersecurity dissertation *Cross-Platform Energ
 
 The dissertation measures the energy used to generate keys for post-quantum algorithms (ML-KEM, ML-DSA) and classical ones (X25519, NIST P-curves, secp160r1) with OpenSSL 3.5, on five platforms: Raspberry Pi 5, Raspberry Pi Compute Module 5, a RISC-V board, a PC and a Mac mini. Energy is read from an external USB power meter. Each measured run is paired with a `NULL` run of the same length that generates nothing, so the energy of key generation is the `LIVE` run minus the `NULL` run.
 
-This repository holds the measurement software, the logs of every session and the measured results. It is meant to show how the data was produced, so the experiments can be repeated; it is not a packaged tool.
+This repository holds the measurement software, the logs of every session and the measured results. It is meant to show how the data was produced, so the experiments can be repeated. It's not a packaged tool (that's for another day!).
 
 ## Contents
 
@@ -32,17 +32,17 @@ Each folder has its own `README.md`.
 2. The **Collector**, a separate Raspberry Pi 5 with a TC66C USB power meter, records the meter readings against start and stop messages sent by the Experimenter.
 3. Each `LIVE` run is followed or preceded by a `NULL` run of the same length, and the Collector writes one row per run to `AllResults.csv`. The files in `results/` are that table, reduced to the sessions used in the analysis.
 
-The testbed is isolated: the devices have no internet access during runs, and the Collector and time server are fixed on a private network.
+The testbed is isolated: the devices have no internet access during runs (except for a couple in E1 and are disconnected when not these), and the Collector and time server (GPS fed) are fixed on a private network.
 
 ## Using this repository
 
 - To see what was measured, start with `results/README.md` and the CSV files.
-- To check a session, find it in `logs/`; each block is headed by its session id and the `Experiment_ID` column in the CSVs starts with the same id.
+- To check a session, find it in `logs/`, each block is headed by its session ID and the `Experiment_ID` column in the CSVs starts with the same id.
 - To repeat an experiment, build a platform following `platform_build/BUILD.md`, run `collector.py` on the Collector, then run the Experimenter on the device under test (see `software/README.md`).
 
 ## Not included
 
-The per-run raw files from the Collector (several thousand small files), the analysis scripts that produce the dissertation's tables and figures, and sessions that were not used in the analysis (smoke tests, calibration runs and superseded sessions).
+The per-run raw files from the Collector (several thousand small files), the raw analysis that produces the dissertation's tables and figures, and sessions that were not used in the analysis (smoke tests, calibration runs and superseded sessions).
 
 ## Licence and credit
 
