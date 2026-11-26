@@ -20,4 +20,4 @@ Example, on a device under test with the Collector running (usage and options ar
 python3 experimenter_e2.py --help
 ```
 
-The scripts use the testbed's fixed addresses as defaults (the Collector at 192.168.55.200 and the time server at 192.168.55.100); change them with `--collector` and `--ntp-server`. Python packages needed include `pycryptodome` and `pyserial`; OpenSSL 3.5 is needed for the post-quantum algorithms.
+The scripts use the testbed's fixed addresses as defaults (the Collector at 192.168.55.200 and the time server at 192.168.55.100); change them with `--collector` and `--ntp-server`. Python packages needed include `pycryptodome` and `pyserial`, OpenSSL 3.5 is needed for the cryptographic algorithms.
