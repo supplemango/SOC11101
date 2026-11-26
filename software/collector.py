@@ -63,12 +63,12 @@ Adaptions from the original Windows responder.py:
 - AllResults.csv is set to RO unless being written (if the user leaves it open in an editor this stops the log
   being updated, which is bad).
 
-Changes for E2 and later (this file's design record is in the project: collector-design-notes.md):
------------------------------------------------------------------------------------------------
+Changes for E2 and later:
+------------------------
 - Persistent service, one meter object opened once at startup (no new TC66C per GETREADY), state per run_id.
 - No replies, duplicates ignored, START/STOP/SUMMARY without their GETREADY handled and flagged (no_getready,
   no_start, no_stop, no_summary, aborted_by_new_getready, duration_mismatch ...).
-- Energy window from START/STOP-triggered readings; DUT monotonic duration reported; SUMMARY message added.
+- Energy window from START/STOP-triggered readings; DUT monotonic duration reported, SUMMARY message added.
 - 32-column AllResults.csv per experiment folder (the two per-1000 columns were dropped); per-run trace file names
   now carry date-time, DUT, experiment, sequence, role, algorithm and count.
 - UDP only (the unused TCP stub was removed); datagrams up to 64 KB are accepted (SUMMARY can be several KB).
