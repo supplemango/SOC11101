@@ -9,7 +9,7 @@ Cleaned notes of the commands used to prepare each device for the experiments in
 - Notes were written during the build. Some steps are deliberately repeated (e.g. `netplan apply` / `cloud-init clean`) because ordering mattered on some images.
 - `<user>` stands for the experiment account created on each device.
 
-![image alt]{https://github.com/supplemango/SOC11101/blob/ca97e44a7948b18141faaba7725e8b1d76b2cf58/pics/Schematic.png}
+![image alt](https://github.com/supplemango/SOC11101/blob/ca97e44a7948b18141faaba7725e8b1d76b2cf58/pics/Schematic.png)
 
 
 Lab addresses used in these notes: Collector `192.168.55.200`, DUT-PC `192.168.55.17`, DUT-RISCV `192.168.55.15`, jump host / NTP `192.168.55.100`, more in the dissertation attached.
