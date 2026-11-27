@@ -4,6 +4,8 @@ Supporting material for the MSc Cybersecurity dissertation *Cross-Platform Energ
 
 The dissertation measures the energy used to generate keys for post-quantum algorithms (ML-KEM, ML-DSA) and classical ones (X25519, NIST P-curves, secp160r1) with OpenSSL 3.5, on five platforms: Raspberry Pi 5, Raspberry Pi Compute Module 5, a RISC-V board, a PC and a Mac mini. Energy is read from an external USB power meter. Each measured run is paired with a `NULL` run of the same length that generates nothing, so the energy of key generation is the `LIVE` run minus the `NULL` run.
 
+![image alt](https://github.com/supplemango/SOC11101/blob/48e6b0d7d1fd38fd2e716e0bc5e7e02e51c7eaf9/pics/dut-duckies.jpg)
+
 This repository holds the measurement software, the logs of every session and the measured results. It is meant to show how the data was produced, so the experiments can be repeated. It's not a packaged tool (that's for another day!).
 
 ## Contents
